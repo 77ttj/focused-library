@@ -112,6 +112,7 @@ PDB_processed_select_ligandsplit_4_5_3
 |   |___1rkp.pdb # pdb_id
 |   |___1rkp_ligand_IBM.pdb
 |   |___1rkp_pocket_IBM.pdb
+|   |___...
 |
 ```
 6. Computing structural similarities against a baseline set.
