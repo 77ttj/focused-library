@@ -38,7 +38,7 @@ import ast
 
 
 # 定义源文件
-src_pdb = './pdb_files/5ovf.pdb'
+src_pdb = './pdb_files/KIT_3G0E.pdb'
 
 
 
@@ -532,8 +532,8 @@ if len(ligands) != 0:
 ##########################################################################################################################
                             # 按条件筛选行,选取与需计算的靶点口袋氨基酸序列局部相似度前1000的PDB
                             # 计算口袋相似性
-                            
-                            df[['pocket_similarity']] = df.apply(pocket_similarity, args=(pdb_pocket_filepath,), axis=1, result_type='expand')
+                            df_test = df.apply(pocket_similarity, args=(pdb_pocket_filepath,), axis=1, result_type='expand').tolist()
+                            df['pocket_similarity'] = df_test
                             #计算口袋氨基酸序列的全局相似性
                             #df[['pocket_seq_similarity', 'pocket_seq_similarity_start', 'pocket_seq_similarity_end']] = df.apply(calculate_global_similarity, args=(sequence,), axis=1, result_type='expand')
                             
@@ -552,7 +552,7 @@ if len(ligands) != 0:
                             #top_1000_dict = top_1000_rows.to_dict(orient='records')
 
                             # 选取第2、4列并另存为csv文件
-                            top_1000_rows.to_csv('test_selected_pdbfile_by_pocket_similarity_nik.csv', index=None)
+                            top_1000_rows.to_csv('./result/KIT/KIT_selected_pdbfile_by_pocket_similarity_nik.csv', index=None)
 
                             
                             # 基于recap规则打碎分子
@@ -569,12 +569,12 @@ if len(ligands) != 0:
                             
                             # 将碎片和原smiles另存为csv文件
                             fragments_df = pd.DataFrame(fragments, columns=['original_smiles', 'fragment_smiles', 'fragment'])
-                            fragments_df.to_csv('test_fragments_file_by_pocket_similarity_nik.csv', index=None)
+                            fragments_df.to_csv('./result/KIT/KIT_fragments_file_by_pocket_similarity_nik.csv', index=None)
                             
                             # 将碎片库单独另存为csv文件
                             fragment_library = list(set(fragments_df['fragment'].tolist()))
                             fragment_library_df = pd.DataFrame(fragment_library, columns=['fragment'])
-                            fragment_library_df.to_csv('test_fragment_library_file_by_pocket_similarity_nik.csv', index=None)
+                            fragment_library_df.to_csv('./result/KIT/KIT_fragment_library_file_by_pocket_similarity_nik.csv', index=None)
                             
                             # 随机重组碎片生成新的分子
                             new_molecules = []
@@ -620,4 +620,4 @@ if len(ligands) != 0:
                             
                             # 将新分子和smiles另存为csv文件
                             new_molecules_df = pd.DataFrame(new_molecules, columns=['id', 'frag1','frag2','new_smiles'])
-                            new_molecules_df.to_csv('test_new_molecules_file_by_pocket_similarity_filter_NIK_10000.csv', index=None)
+                            new_molecules_df.to_csv('./result/KIT/KIT_new_molecules_file_by_pocket_similarity_filter_NIK_10000.csv', index=None)

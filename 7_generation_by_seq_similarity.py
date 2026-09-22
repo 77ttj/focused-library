@@ -37,7 +37,7 @@ import ast
 
 # 定义源文件
 #src_pdb = './pdb_files/4g3e.pdb'
-src_pdb = './pdb_files/5ovf.pdb'
+src_pdb = 'pdb_files/KIT_3G0E.pdb'
 dst_folder = './PDB_processed_select_ligandsplit_4_5_3/'
 #src_folder = './test_4/'
 
@@ -488,7 +488,7 @@ if len(ligands) != 0:
 
                             # 选取第2、4列并另存为csv文件
                          #   top_1000_rows.to_csv('selected_pdbfile_by_pocket_seq_similarity_1000_nik.csv', index=None)
-                            top_1000_rows.to_csv('test_selected_pdbfile_by_pocket_seq_similarity_1000.csv', index=None)
+                            top_1000_rows.to_csv('./result/KIT/KIT_selected_pdbfile_by_pocket_seq_similarity_1000.csv', index=None)
 
                             
                             # 基于recap规则打碎分子
@@ -505,13 +505,13 @@ if len(ligands) != 0:
                             
                             # 将碎片和原smiles另存为csv文件
                             fragments_df = pd.DataFrame(fragments, columns=['original_smiles', 'fragment_smiles', 'fragment'])
-                            fragments_df.to_csv('test_fragments_file_by_pocket_seq_similarity.csv', index=None)
+                            fragments_df.to_csv('./result/KIT/KIT_fragments_file_by_pocket_seq_similarity.csv', index=None)
                             
                             # 将碎片库单独另存为csv文件
                             fragment_library = list(set(fragments_df['fragment'].tolist()))
                             fragment_library_df = pd.DataFrame(fragment_library, columns=['fragment'])
                           #  fragment_library_df.to_csv('fragment_library_file_by_pocket_seq_similarity_nik.csv', index=None)
-                            fragment_library_df.to_csv('test_fragment_library_file_by_pocket_seq_similarity.csv', index=None)
+                            fragment_library_df.to_csv('./result/KIT/KIT_fragment_library_file_by_pocket_seq_similarity.csv', index=None)
                             
                             # 随机重组碎片生成新的分子
                             new_molecules = []
@@ -558,4 +558,4 @@ if len(ligands) != 0:
                             # 将新分子和smiles另存为csv文件
                             new_molecules_df = pd.DataFrame(new_molecules, columns=['id', 'frag1','frag2','new_smiles'])
                          #   new_molecules_df.to_csv('new_molecules_file_by_pocket_seq_similarity_filter_10000_nik.csv', index=None)
-                            new_molecules_df.to_csv('test_new_molecules_file_by_pocket_seq_similarity_filter_10000.csv', index=None)
+                            new_molecules_df.to_csv('./result/KIT/KIT_new_molecules_file_by_pocket_seq_similarity_filter_10000.csv', index=None)
