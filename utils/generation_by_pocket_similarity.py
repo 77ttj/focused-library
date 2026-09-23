@@ -45,7 +45,7 @@ def pocket_similarity(row,protein2_pdb):
     # 计算蛋白质口袋的形状描述符（Morgan指纹）
     pdb_id = row['pdb_id'].strip('"')
     ligand_name = row['ligand_name'].strip('"')
-    protein1_pdb = os.path.join("D:\\Research Project\\ll\\paper\\Codes/PDB_processed_select_ligandsplit_4_5_3",row['Uniprot_accession'],f"{pdb_id}_pocket_{ligand_name}.pdb")
+    protein1_pdb = os.path.join("../PDB_processed_select_ligandsplit_4_5_3",row['Uniprot_accession'],f"{pdb_id}_pocket_{ligand_name}.pdb")
   #  print(protein1_pdb)
     mol1 = Chem.MolFromPDBFile(protein1_pdb)
     mol2 = Chem.MolFromPDBFile(protein2_pdb)
@@ -492,7 +492,7 @@ def process(src_pdb, num):
                                 # 读取原始csv文件
                              #   df = pd.read_csv('./output_PDB_all_processed_select_ligandsplit_4_5_4_pocketseq_notnull.csv')
                                 df = pd.read_csv(
-                                    './output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv')
+                                    '../output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv')
 
     ##########################################################################################################################
                                 # 按条件筛选行,选取与需计算的靶点口袋氨基酸序列局部相似度前1000的PDB
@@ -548,7 +548,7 @@ def process(src_pdb, num):
                                 new_molecules_smiles=[]
                                 n=0
                                 while n < 10000:  # 生成10000个新分子
-                                    print(n)
+                                    # print(n)
                                     selected_fragments = random.sample(fragment_library, 2)
                                     #random.shuffle(fragment_library)
                                     fragments_mols = [Chem.MolFromSmiles(smiles) for smiles in selected_fragments]
@@ -590,3 +590,8 @@ def process(src_pdb, num):
                                 new_molecules_df = pd.DataFrame(new_molecules, columns=['id', 'frag1','frag2','new_smiles'])
                                 new_molecules_df.to_csv('new_molecules_file_by_pocket_similarity_filter_10000.csv', index=None)
                                 return new_molecules_smiles
+
+if __name__ == "__main__":
+    src_pdb = "../pdb_files/5ovf.pdb"
+    num = 1000
+    process(src_pdb, num)

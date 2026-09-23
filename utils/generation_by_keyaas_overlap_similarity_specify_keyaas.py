@@ -208,7 +208,7 @@ def process(key_aas_list, num):
     result = []
     # 读取原始csv文件
     #df = pd.read_csv('./output_PDB_all_processed_select_ligandsplit_4_5_4_pocketseq_notnull.csv')
-    df = pd.read_csv('./output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv')
+    df = pd.read_csv('../output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv')
 
     ##########################################################################################################################
     # 按条件筛选行,选取与需计算的靶点关键氨基酸重合度>=75%的pdb
@@ -251,7 +251,7 @@ def process(key_aas_list, num):
     new_molecules_smiles=[]
     n=0
     while n < 1000:  # 生成10000个新分子
-        print(n)
+        # print(n)
         selected_fragments = random.sample(fragment_library, 2)
         #random.shuffle(fragment_library)
         fragments_mols = [Chem.MolFromSmiles(smiles) for smiles in selected_fragments]
@@ -293,3 +293,8 @@ def process(key_aas_list, num):
     new_molecules_df = pd.DataFrame(new_molecules, columns=['id', 'frag1','frag2','new_smiles'])
     new_molecules_df.to_csv('new_molecules_file_by_keyaas_overlap_filter_10000.csv', index=None)
     return new_molecules_smiles
+
+if __name__ == "__main__":
+    key_aas_list = ['TYR', 'TYR', 'TYR']
+    num = 1000
+    process(key_aas_list, num)

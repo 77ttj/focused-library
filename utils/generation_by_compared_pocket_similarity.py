@@ -30,9 +30,8 @@ import ast
 
 
 # 定义源文件
-#src_pdb = "D:\\Research Project\\ll\\paper\\Codes\\pdb_files\\5ovf.pdb"
-#dst_folder = './PDB_homo_processed_select_ligandsplit_4_5_3/'
-#src_folder = './test_4/'
+
+
 
 
 '''
@@ -237,7 +236,7 @@ def breakmol(df):
 
 def process(src_pdb, num):
     # 文件夹路径
-    folder_path = 'D:\\Research Project\\ll\\paper\\Codes/selected_base_pdb_pocket'
+    folder_path = '../selected_base_pdb_pocket'
     file_list = os.listdir(folder_path)
 
     # 存储处理后的结果的列表
@@ -509,7 +508,7 @@ def process(src_pdb, num):
                               #  # 读取原始csv文件
                               #  df = pd.read_csv('./output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv')
                                 df = pd.read_csv(
-                                    './output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv')
+                                    '../output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv')
 
     ##########################################################################################################################
                                 # 按条件筛选行,选取与需计算的靶点口袋氨基酸序列局部相似度前1000的PDB
@@ -565,7 +564,7 @@ def process(src_pdb, num):
                                 new_molecules_smiles=[]
                                 n=0
                                 while n < 10000:  # 生成10000个新分子
-                                    print(n)
+                                    # print(n)
                                     selected_fragments = random.sample(fragment_library, 2)
                                     #random.shuffle(fragment_library)
                                     fragments_mols = [Chem.MolFromSmiles(smiles) for smiles in selected_fragments]
@@ -607,3 +606,7 @@ def process(src_pdb, num):
                                 new_molecules_df = pd.DataFrame(new_molecules, columns=['id', 'frag1','frag2','new_smiles'])
                                 new_molecules_df.to_csv('new_molecules_file_by_compared_pocket_similarity_refined_filter.csv', index=None)
                                 return new_molecules_smiles
+if __name__ == "__main__":
+    src_pdb = "../pdb_files/5ovf.pdb"
+    num = 1000
+    process(src_pdb, num)

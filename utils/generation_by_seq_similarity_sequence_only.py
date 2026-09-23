@@ -172,7 +172,7 @@ def overlap_ratio(list1, list2):
 def process(sequence,num):
     # 读取原始csv文件
     # df = pd.read_csv('./output_PDB_all_processed_select_ligandsplit_4_5_4_pocketseq_notnull.csv')
-    df = pd.read_csv('./output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv')
+    df = pd.read_csv('../output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv')
 
     ##########################################################################################################################
     # 按条件筛选行,选取与需计算的靶点口袋氨基酸序列局部相似度前1000的PDB
@@ -267,3 +267,8 @@ def process(sequence,num):
     new_molecules_df = pd.DataFrame(new_molecules, columns=['id', 'frag1','frag2','new_smiles'])
     new_molecules_df.to_csv('new_molecules_file_by_pocket_seq_similarity_filter_10000.csv', index=None)
     return new_molecules_smiles
+
+if __name__ == "__main__":
+    sequence = 'FYSYLGAMFFLL'
+    num = 1000
+    process(sequence, num)
