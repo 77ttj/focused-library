@@ -120,7 +120,8 @@ PDB_processed_select_ligandsplit_4_5_3
 run 6_compute_362base_pdb_sim.py
 ```
 After execution, the file `output_PDB_test_processed_select_ligandsplit_4_5_4_compute_362base_sim_refined.csv` is generated.
-The file contains similarity scores between each PDB and the PDBs in the reference dataset.
+The file contains similarity scores between each PDB and the PDBs in the reference dataset. 
+The prepared data file can be downloaded at this link: [https://doi.org/10.5281/zenodo.22912791](https://doi.org/10.5281/zenodo.22912791)
 
 7. Molecular Generation
 ```
