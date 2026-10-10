@@ -152,3 +152,7 @@ Ligand Efficiency: Calculate ligand efficiency from docking scores and heavy ato
 * Molecular Visualization: Generate ranked molecular structure images based on docking scores.
 
 * Data Processing: Perform molecular deduplication, filtering, and CSV processing.
+
+9. Gradio
+
+Launching the Gradio script: Run `focused_library_gradio.py` located in the `utils` folder.
