@@ -115,6 +115,8 @@ PDB_processed_select_ligandsplit_4_5_3
 |   |___...
 |
 ```
+`PDB_processed_select_ligandsplit_4_5_3` in this repository is a partial pocket-ligand dataset. For the full dataset, please contact 2979001663@qq.com.
+
 6. Computing structural similarities against a baseline set.
 ```
 run 6_compute_362base_pdb_sim.py
