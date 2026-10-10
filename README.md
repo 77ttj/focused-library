@@ -136,3 +136,17 @@ Running the four similarity strategy scripts separately will generate three type
 `fragment_library_file_by_*_similarity.csv`, `fragments_file_by_*_similarity.csv`, and `new_molecules_file_by_*_similarity_filter_10000.csv`. 
 These files store the ligands extracted from the top 1000 PDB structures ranked by similarity scores, the chemically reasonable fragments decomposed from these ligands via the RECAP (Retrosynthetic Combinatorial Analysis Procedure) algorithm, and the newly generated molecules, respectively.
 
+8. Analysis and Visualization
+
+./result/pic_plot.ipynb provides Python scripts for analyzing and visualizing molecular docking results, evaluating virtual screening performance, and comparing generated molecules with reference ligands.
+Ligand Efficiency: Calculate ligand efficiency from docking scores and heavy atom counts.
+
+* Docking Score Analysis: Visualize docking score distributions across different molecular datasets.
+
+* Virtual Screening Evaluation: Calculate enrichment factors (EF).
+
+* Molecular Similarity: Evaluate Tanimoto similarity using ECFP4 fingerprints (2048 bits).
+
+* Molecular Visualization: Generate ranked molecular structure images based on docking scores.
+
+* Data Processing: Perform molecular deduplication, filtering, and CSV processing.
