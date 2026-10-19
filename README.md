@@ -140,7 +140,7 @@ These files store the ligands extracted from the top 1000 PDB structures ranked 
 
 8. Analysis and Visualization
 
-./result/pic_plot.ipynb provides Python scripts for analyzing and visualizing molecular docking results, evaluating virtual screening performance, and comparing generated molecules with reference ligands.
+`./result/pic_plot.ipynb` provides Python scripts for analyzing and visualizing molecular docking results, evaluating virtual screening performance, and comparing generated molecules with reference ligands.
 Ligand Efficiency: Calculate ligand efficiency from docking scores and heavy atom counts.
 
 * Docking Score Analysis: Visualize docking score distributions across different molecular datasets.
