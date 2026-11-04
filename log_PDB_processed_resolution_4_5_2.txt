@@ -1,0 +1,122 @@
+[./PDB_all/O95180/9ayg.pdb]分辨率符合要求:3.0埃
+select ./PDB_all/O95180/9ayg.pdb
+分辨率符合标准的PDB数量有：1个
+[./PDB_all/O43451/2qly.pdb]分辨率符合要求:2.0埃
+select ./PDB_all/O43451/2qly.pdb
+[./PDB_all/O43451/3top.pdb]分辨率符合要求:2.88埃
+select ./PDB_all/O43451/3top.pdb
+[./PDB_all/O43451/3ton.pdb]分辨率符合要求:2.95埃
+select ./PDB_all/O43451/3ton.pdb
+[./PDB_all/O43451/3l4x.pdb]分辨率符合要求:1.9埃
+select ./PDB_all/O43451/3l4x.pdb
+[./PDB_all/O43451/3l4t.pdb]分辨率符合要求:1.9埃
+select ./PDB_all/O43451/3l4t.pdb
+[./PDB_all/O43451/3l4v.pdb]分辨率符合要求:2.1埃
+select ./PDB_all/O43451/3l4v.pdb
+[./PDB_all/O43451/3l4u.pdb]分辨率符合要求:1.9埃
+select ./PDB_all/O43451/3l4u.pdb
+[./PDB_all/O43451/3ctt.pdb]分辨率符合要求:2.1埃
+select ./PDB_all/O43451/3ctt.pdb
+[./PDB_all/O43451/3l4w.pdb]分辨率符合要求:2.0埃
+select ./PDB_all/O43451/3l4w.pdb
+[./PDB_all/O43451/2qmj.pdb]分辨率符合要求:1.9埃
+select ./PDB_all/O43451/2qmj.pdb
+[./PDB_all/O43451/3l4y.pdb]分辨率符合要求:1.8埃
+select ./PDB_all/O43451/3l4y.pdb
+[./PDB_all/O43451/3l4z.pdb]分辨率符合要求:2.0埃
+select ./PDB_all/O43451/3l4z.pdb
+分辨率符合标准的PDB数量有：12个
+[./PDB_all/O76074/3mf0.pdb]分辨率符合要求:3.1埃
+select ./PDB_all/O76074/3mf0.pdb
+[./PDB_all/O76074/1rkp.pdb]分辨率符合要求:2.05埃
+select ./PDB_all/O76074/1rkp.pdb
+[./PDB_all/O76074/3b2r.pdb]分辨率符合要求:2.07埃
+select ./PDB_all/O76074/3b2r.pdb
+[./PDB_all/O76074/1xp0.pdb]分辨率符合要求:1.79埃
+select ./PDB_all/O76074/1xp0.pdb
+[./PDB_all/O76074/5zz2.pdb]分辨率符合要求:2.6埃
+select ./PDB_all/O76074/5zz2.pdb
+[./PDB_all/O76074/4ia0.pdb]分辨率符合要求:2.17埃
+select ./PDB_all/O76074/4ia0.pdb
+[./PDB_all/O76074/3jwr.pdb]分辨率符合要求:2.99埃
+select ./PDB_all/O76074/3jwr.pdb
+[./PDB_all/O76074/8wkf.pdb]分辨率符合要求:2.4埃
+select ./PDB_all/O76074/8wkf.pdb
+[./PDB_all/O76074/5jo3.pdb]分辨率符合要求:1.49埃
+select ./PDB_all/O76074/5jo3.pdb
+[./PDB_all/O76074/2h44.pdb]分辨率符合要求:1.8埃
+select ./PDB_all/O76074/2h44.pdb
+[./PDB_all/O76074/1t9s.pdb]分辨率符合要求:2.0埃
+select ./PDB_all/O76074/1t9s.pdb
+[./PDB_all/O76074/8wkg.pdb]分辨率符合要求:2.4埃
+select ./PDB_all/O76074/8wkg.pdb
+[./PDB_all/O76074/1uho.pdb]分辨率符合要求:2.5埃
+select ./PDB_all/O76074/1uho.pdb
+[./PDB_all/O76074/1udu.pdb]分辨率符合要求:2.83埃
+select ./PDB_all/O76074/1udu.pdb
+[./PDB_all/O76074/3jwq.pdb]分辨率符合要求:2.87埃
+select ./PDB_all/O76074/3jwq.pdb
+[./PDB_all/O76074/7faq.pdb]分辨率符合要求:2.2埃
+select ./PDB_all/O76074/7faq.pdb
+[./PDB_all/O76074/3tge.pdb]分辨率符合要求:1.96埃
+select ./PDB_all/O76074/3tge.pdb
+[./PDB_all/O76074/6vbi.pdb]分辨率符合要求:2.3埃
+select ./PDB_all/O76074/6vbi.pdb
+[./PDB_all/O76074/2h40.pdb]分辨率符合要求:1.85埃
+select ./PDB_all/O76074/2h40.pdb
+[./PDB_all/O76074/6iwi.pdb]分辨率符合要求:2.16埃
+select ./PDB_all/O76074/6iwi.pdb
+[./PDB_all/O76074/1udt.pdb]分辨率符合要求:2.3埃
+select ./PDB_all/O76074/1udt.pdb
+[./PDB_all/O76074/3lfv.pdb]分辨率符合要求:2.8埃
+select ./PDB_all/O76074/3lfv.pdb
+[./PDB_all/O76074/3shz.pdb]分辨率符合要求:2.45埃
+select ./PDB_all/O76074/3shz.pdb
+[./PDB_all/O76074/4g2y.pdb]分辨率符合要求:2.4埃
+select ./PDB_all/O76074/4g2y.pdb
+[./PDB_all/O76074/3shy.pdb]分辨率符合要求:2.65埃
+select ./PDB_all/O76074/3shy.pdb
+[./PDB_all/O76074/4oex.pdb]分辨率符合要求:2.14埃
+select ./PDB_all/O76074/4oex.pdb
+[./PDB_all/O76074/4i9z.pdb]分辨率符合要求:2.08埃
+select ./PDB_all/O76074/4i9z.pdb
+[./PDB_all/O76074/6l6e.pdb]分辨率符合要求:1.92埃
+select ./PDB_all/O76074/6l6e.pdb
+[./PDB_all/O76074/8w4t.pdb]分辨率符合要求:2.2埃
+select ./PDB_all/O76074/8w4t.pdb
+[./PDB_all/O76074/7far.pdb]分辨率符合要求:2.4埃
+select ./PDB_all/O76074/7far.pdb
+[./PDB_all/O76074/3bjc.pdb]分辨率符合要求:2.0埃
+select ./PDB_all/O76074/3bjc.pdb
+[./PDB_all/O76074/6acb.pdb]分辨率符合要求:2.8埃
+select ./PDB_all/O76074/6acb.pdb
+[./PDB_all/O76074/1tbf.pdb]分辨率符合要求:1.3埃
+select ./PDB_all/O76074/1tbf.pdb
+[./PDB_all/O76074/4oew.pdb]分辨率符合要求:2.44埃
+select ./PDB_all/O76074/4oew.pdb
+[./PDB_all/O76074/2chm.pdb]分辨率符合要求:1.6埃
+select ./PDB_all/O76074/2chm.pdb
+[./PDB_all/O76074/2h42.pdb]分辨率符合要求:2.3埃
+select ./PDB_all/O76074/2h42.pdb
+[./PDB_all/O76074/4g2w.pdb]分辨率符合要求:2.28埃
+select ./PDB_all/O76074/4g2w.pdb
+[./PDB_all/O76074/1t9r.pdb]分辨率符合要求:2.1埃
+select ./PDB_all/O76074/1t9r.pdb
+[./PDB_all/O76074/3hc8.pdb]分辨率符合要求:1.79埃
+select ./PDB_all/O76074/3hc8.pdb
+[./PDB_all/O76074/3hdz.pdb]分辨率符合要求:1.8埃
+select ./PDB_all/O76074/3hdz.pdb
+[./PDB_all/O76074/3sie.pdb]分辨率符合要求:1.93埃
+select ./PDB_all/O76074/3sie.pdb
+[./PDB_all/O76074/8w4s.pdb]分辨率符合要求:1.85埃
+select ./PDB_all/O76074/8w4s.pdb
+[./PDB_all/O76074/3tgg.pdb]分辨率符合要求:1.91埃
+select ./PDB_all/O76074/3tgg.pdb
+[./PDB_all/O76074/4md6.pdb]分辨率符合要求:2.0埃
+select ./PDB_all/O76074/4md6.pdb
+[./PDB_all/O76074/2xss.pdb]分辨率符合要求:2.5埃
+select ./PDB_all/O76074/2xss.pdb
+[./PDB_all/O76074/1xoz.pdb]分辨率符合要求:1.37埃
+select ./PDB_all/O76074/1xoz.pdb
+分辨率符合标准的PDB数量有：46个
+分辨率符合标准的PDB数量有：0个
