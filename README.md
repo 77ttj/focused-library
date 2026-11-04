@@ -1,4 +1,4 @@
-# Muulti-dimensional similarity-driven methods for molecular library construction
+# Multi-dimensional similarity-driven methods for molecular library construction
 # 🧬 Overview
 **In this work, we developed a comprehensive protein–ligand co-crystal database by systematically mining the Protein Data Bank (PDB). And on that basis, we proposed a set of multi-dimensional similarity-driven strategies for molecular library construction. The resulting libraries exhibit high novelty, potency, synthetic accessibility, and favorable drug-like properties, while covering diverse chemical space. These target-specific libraries provide rich candidate pools for hit identification and lead optimization.**
 
@@ -28,13 +28,15 @@ cd focused-library
 
 ```
 Bash
-pip install -r requirements.txt
+conda env create -f environment.yml 
+or 
+pip install requests==2.33.1, urllib3==2.6.3, pandas==2.3.3, biopython==1.87, sniffio==1.3.1, rdkit==2023.9.6, scipy==1.17.1
 ```
-Note: The requirements.txt includes the full computational environment. The core functionalities heavily rely on RDKit, Biopython, Pandas, SciPy, and Scikit-Learn.
+Note: The environment.yml includes the full computational environment. The core functionalities heavily rely on RDKit, Biopython, Pandas, SciPy, and Scikit-Learn.
 
 # 🚀 Pipeline Workflow
 
-**The repository is organized into sequential scripts. Run them in order to complete the full workflow.**
+**These scripts describe the main stages of the computational pipeline. However, the currently available public materials are not yet sufficient to reproduce all published results. Due to the large size of the dataset files, the complete dataset cannot be uploaded; therefore, only a sample subset is currently provided.**
 
 ### Phase 1: Data Acquisition & Preprocessing
 
@@ -57,11 +59,15 @@ Note: The requirements.txt includes the full computational environment. The core
 * 9_generation_by_pocket_similarity.py: Generates molecules based strictly on the 3D physicochemical fingerprint similarity (Dice similarity) of the binding pockets.
 * 10_generation_by_compared_pocket_similarity.py: Embeds pockets into a high-dimensional vector space based on 362 reference structures and computes cosine similarity for downstream fragment generation.
 
+# 🧪 Reproducibility scope and limitations 
+The repository includes `chembl31_single_protein_list_deduplicated.csv`. Script 1 uses this target list to query and download PDB structures.
+The deposited pocket–ligand directory contains only a subset of the dataset and is insufficient on its own to reconstruct the complete study dataset.
+
 # 🧪 Usage
 
 ### Reproduction
 
-1. Obtain `uniprot_pdb_list_all_protein.csv`, which contains the corresponding PDB IDs of each target in the PDB database, and download the corresponding PDB files
+1. Run `1_pdbid_search_download_base_uniprot_all.py` from the repository root using `chembl31_single_protein_list_deduplicated.csv` as input. The script reads the `UniProt_Accessions` and sequence columns and writes `uniprot_pdb_list_all_protein.csv`.
 ```
 run 1_pdbid_search_download_base_uniprot_all.py
 ```
@@ -121,11 +127,11 @@ PDB_processed_select_ligandsplit_4_5_3
 ```
 run 6_compute_362base_pdb_sim.py
 ```
-After execution, the file `output_PDB_test_processed_select_ligandsplit_4_5_4_compute_362base_sim_refined.csv` is generated.
+After execution, the file `output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv` is generated.
 The file contains similarity scores between each PDB and the PDBs in the reference dataset. 
 The prepared dataset file can be downloaded at this link: [https://doi.org/10.5281/zenodo.22912791](https://doi.org/10.5281/zenodo.22912791)
  
-7. Molecular Generation
+7. Molecular Generation: All generation scripts directly read the identically named file output by Script 6: `output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv`
 ```
 run *_generation_by_*.py
 ```
