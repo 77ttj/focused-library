@@ -83,26 +83,26 @@ PDB_all
 |   |___...
 |
 ```
-2. Write the successfully downloaded PDB entries to uniprot_pdb_list_protein_downloaded_new.csv.
+2. Write the successfully downloaded PDB entries to `uniprot_pdb_list_protein_downloaded_new.csv`.
 
 ```
 run 2_downloaded_id_add_to_file.py
 ```
-3. Cleans up specific file formats (e.g., removing _1.pdb suffixes) and organizes them into a clean processing directory.
+3. Cleans up specific file formats (e.g., removing the _1.pdb suffix) and organizes them into a clean processing directory named `PDB_processed_1`.
 
 ```
 run 3_move_processed_pdb_to_new_fold.py
 ```
-4. Select high-resolution PDB structures(e.g., keeping only those with resolution $\le$ 4.5 Å).
+4. This script automatically filters PDB structure files based on their crystallographic resolution. Using `Biopython`, it recursively parses all PDB files in the source directory (`./PDB_all`) to extract resolution information from their headers. Structures with a resolution of 4.5 Å or better are then selected and copied to the target directory (`./PDB_processed_resolution_4_5_2/`), preserving the original parent-folder structure. A detailed execution log, including acceptance/rejection criteria for each file and final statistics, is generated and saved to `log_PDB_processed_resolution_4_5_2.txt` for traceability.
 
 ```
 run 4_pdb_selection_by_resolution.py
 ```
-5. Identify valid small-molecule ligands, extracts them, defines the binding pocket within 6.0 Å, and calculates specific non-covalent interactions to identify "key amino acids."
+5. This script is primarily designed to extract and screen binding pockets containing valid small-molecule ligands, along with their interaction profiles, from high-resolution PDB structures. Finally, all extracted features are compiled and output to the `output_PDB_test_processed_select_ligandsplit_4_5_4.csv` file, while the correspondingly split ligand and pocket PDB structures are saved.
 ```
 run 5_pdb_selection_ligand_constraint_extraction_pocket_1031.py
 ```
-After execution, the file `output_PDB_test_processed_select_ligandsplit_4_5_4.csv` is generated, which records pocket information, ligand information and key amino acid residues for each PDB structure.
+After execution, the file `output_PDB_test_processed_select_ligandsplit_4_5_4.csv` and `PDB_processed_select_ligandsplit_4_5_3` is generated, which records pocket information, ligand information and key amino acid residues for each PDB structure.
 The resulting file structure is as follows:
 ```
 PDB_processed_select_ligandsplit_4_5_3
