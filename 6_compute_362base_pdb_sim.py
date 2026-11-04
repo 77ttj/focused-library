@@ -123,4 +123,4 @@ for file_name in file_list:
         column_name = str(file_name)[:4]+"_sim"  # 将列表值的前4位转换为字符串作为新列的列名
         df[column_name] = df.apply(pocket_similarity, args=( file_path,), axis=1, result_type='expand')
         
-df.to_csv('output_PDB_test_processed_select_ligandsplit_4_5_4_compute_362base_sim_refined.csv', index=None)
+df.to_csv('output_PDB_all_processed_select_ligandsplit_compute_362base_sim_refined_4_5_4_all_pocketseq_notnull.csv', index=None)
